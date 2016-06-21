@@ -1,1 +1,6 @@
 This is a twitter page
+
+<%= form_for @tweet do |f| %>
+	<%= f.text_field :message %><br />
+	<%= f.submit "Submit me yo" %>
+<% end %>
