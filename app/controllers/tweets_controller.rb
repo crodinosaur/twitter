@@ -4,5 +4,18 @@ class TweetsController < ApplicationController
 	end
 	def create
 		puts "This is a tweet"
+		puts "the params are #{params}"
+		# tweet_params = params.require(:tweet).permit(:message)
+		@tweet = Tweet.new(tweet_params)
+		# @tweet = Tweet.new(params[:tweet]) #Tweet.new(message: "whatever the user typed")
+		@tweet.save
 	end
+
+
+	def tweet_params
+		params.require(:tweet).permit(:message)
+	end
+
+
+
 end
