@@ -12,6 +12,7 @@ class TweetsController < ApplicationController
 		render 'index'
 	end
 
+		
 
 	def tweet_params
 		params.require(:tweet).permit(:message)

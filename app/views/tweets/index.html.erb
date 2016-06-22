@@ -1,4 +1,8 @@
-This is a twitter page
+This is a twitter page<br />
+
+<% @tweet.errors.full_messages.each do |e| %>
+	<%= e %>
+<% end %>
 
 <%= form_for @tweet do |f| %>
 	<%= f.text_field :message %><br />
