@@ -3,7 +3,7 @@ This is a twitter page<br />
 <% @tweet.errors.full_messages.each do |e| %>
 	<%= e %>
 <% end %>
-
+<%= "#{flash[:success]}" %>
 <%= form_for @tweet do |f| %>
 	<%= f.text_field :message %><br />
 	<%= f.submit "Submit me" %>
