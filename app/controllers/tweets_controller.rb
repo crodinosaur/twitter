@@ -9,6 +9,7 @@ class TweetsController < ApplicationController
 		@tweet = Tweet.new(tweet_params)
 		# @tweet = Tweet.new(params[:tweet]) #Tweet.new(message: "whatever the user typed")
 		@tweet.save
+		render 'index'
 	end
 
 

@@ -2,5 +2,7 @@ This is a twitter page
 
 <%= form_for @tweet do |f| %>
 	<%= f.text_field :message %><br />
-	<%= f.submit "Submit me yo" %>
+	<%= f.submit "Submit me" %>
 <% end %>
+
+<%= @tweet.inspect %>
